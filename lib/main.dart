@@ -114,9 +114,15 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
+       onPressed: () {
+        ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Hello from Team Sakura!')),
         tooltip: 'Increment',
         child: const Icon(Icons.add),
+        ),
+      );
+    
+    },
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
